@@ -28,16 +28,20 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                    <a class="navbar-brand" href="{{ url('/home') }}">
+                        Home
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/meals/create') }}">
+                        Add a Meal
+                    </a>
+                    <a class="navbar-brand" href="{{ url('/meals') }}">
+                        All Meals
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="/home">Home</a></li>
-                        <li><a href="/meals/create">Add a Meal</a></li>
                         &nbsp;
                     </ul>
 

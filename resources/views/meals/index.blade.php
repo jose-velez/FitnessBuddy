@@ -7,7 +7,7 @@
 <ul class="list-group">
     @foreach ($meals as $meal)
       <li class="list-group-item">
-          {{$meal->name}}
+        <a href="/meals/{{$meal->id}}">{{$meal->name}}</a>
       </li>
     @endforeach
 </ul>

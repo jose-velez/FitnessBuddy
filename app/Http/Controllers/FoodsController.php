@@ -4,6 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\User;
+
+use App\Meal;
+
+use App\Food;
+
 class FoodsController extends Controller
 {
     /**
@@ -32,9 +38,20 @@ class FoodsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Food $food, Meal $meal)
     {
-        //
+      $this->validate($request, [
+        'name','protein','carbohydrates','fat' => 'required'
+      ]);
+
+      //create the new meal
+      // taking advantage of the fact that we've set name to be mass-assignable
+      $food = new Food($request->all());
+      $meal->foods()->save($food);
+
+      // send a Response
+      return view('home');
+
     }
 
     /**
@@ -45,7 +62,7 @@ class FoodsController extends Controller
      */
     public function show($id)
     {
-        //
+      //
     }
 
     /**
