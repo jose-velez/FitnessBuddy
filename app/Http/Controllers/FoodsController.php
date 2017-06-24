@@ -49,9 +49,9 @@ class FoodsController extends Controller
       $food = new Food($request->all());
       $meal->foods()->save($food);
 
-      // send a Response
-      return view('home');
 
+      // send a Response
+      return redirect()->action("FoodController@show", $food->id);
     }
 
     /**
@@ -62,7 +62,8 @@ class FoodsController extends Controller
      */
     public function show($id)
     {
-      //
+      $food= Food::find($id);
+      return view('meals.show', compact('food'));
     }
 
     /**

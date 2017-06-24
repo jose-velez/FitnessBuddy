@@ -11,6 +11,23 @@
 
     </div>
     <div class="row">
+      <div class="col-md-12">
+        @if(!$meal->foods->isEmpty())
+          <ul class="list-group">
+            @foreach ($meal->foods as $food)
+              <li class="list-group-item">
+                <h3 class="left-aligned">{{$food->name}}</h3>
+                  <h5 class="right-aligned">Protein: {{$food->protein}}, Carbohydrates: {{$food->carbohydrates}}, Fat: {{$food->fat}}</h5>
+              </li>
+            @endforeach
+          </ul>
+          @else
+          <h3>No food Associated with this meal. You can add some below.</h3>
+        @endif
+      </div>
+
+    </div>
+    <div class="row">
         <div class="col-md-12">
           <form action="/meals/{{ $meal->id }}/foods" method="POST">
   {{ csrf_field() }}
