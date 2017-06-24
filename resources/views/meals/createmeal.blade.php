@@ -9,14 +9,18 @@
 
           <div class="panel-body">
             <form class="meal" action="/users/{{$user->id}}/meals" method="POST">
+
+              {{csrf_field() }}
+
               <fieldset class="form-group">
-              <label for="meal">Meal</label>
+              <label for="name">Meal</label>
               <input type="text"
-                     name="meal"
+                     name="name"
                      class="form-control"
-                     placeholder="Meal Name">
+                     placeholder="Meal Name"
+                     required>
             </fieldset>
-              <button class="btn btn-primary"type="button" name="button">Submit</button>
+              <button class="btn btn-primary"type="submit" name="button" value="submit">Submit</button>
             </form>
 
           </div>
