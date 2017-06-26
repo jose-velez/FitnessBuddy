@@ -21,7 +21,7 @@
         @if(!$meal->foods->isEmpty())
           <ul class="list-group">
             @foreach ($meal->foods as $food)
-              <li class="list-group-item col-md-6 col-sm-12">
+              <li class="list-group-item col-md-5 col-sm-12">
                 <h3 class="left-aligned">{{$food->name}}</h3>
                   <span class="right-aligned">Protein: {{$food->protein}} g, Carbohydrates: {{$food->carbohydrates}} g, Fat: {{$food->fat}} g</span>
               </li>
