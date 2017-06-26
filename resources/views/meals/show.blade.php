@@ -21,9 +21,9 @@
         @if(!$meal->foods->isEmpty())
           <ul class="list-group">
             @foreach ($meal->foods as $food)
-              <li class="list-group-item">
+              <li class="list-group-item col-md-6 col-sm-12">
                 <h3 class="left-aligned">{{$food->name}}</h3>
-                  <h5 class="right-aligned">Protein: {{$food->protein}} g, Carbohydrates: {{$food->carbohydrates}} g, Fat: {{$food->fat}} g</h5>
+                  <span class="right-aligned">Protein: {{$food->protein}} g, Carbohydrates: {{$food->carbohydrates}} g, Fat: {{$food->fat}} g</span>
               </li>
             @endforeach
           </ul>
@@ -34,7 +34,7 @@
 
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12">
           <form action="/meals/{{ $meal->id }}/foods" method="POST">
   {{ csrf_field() }}
 
