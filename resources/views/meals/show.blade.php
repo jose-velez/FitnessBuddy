@@ -6,8 +6,14 @@
       <div class="col-md-12">
 
         <h3>{{$meal->name}}</h3>
-
+          <div class="meal-info">
+              <span>  Calories: </span><br>
+              <span>  Carbohydrates: </span><br>
+              <span>  Protein: </span><br>
+              <span>  Fat: </span><br>
+          </div>
       </div>
+
 
     </div>
     <div class="row">
