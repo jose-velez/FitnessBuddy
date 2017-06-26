@@ -51,7 +51,7 @@ class FoodsController extends Controller
 
 
       // send a Response
-      return redirect()->action("MealController@show", $food->id);
+      return redirect()->action("MealsController@show", $meal->id);
     }
 
     /**

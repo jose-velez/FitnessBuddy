@@ -7,10 +7,10 @@
 
         <h3>{{$meal->name}}</h3>
           <div class="meal-info">
-              <span>  Calories: {{$meal->totalCal()}} </span>
-              <span>  Carbohydrates: {{$meal->totalCarbs()}}</span>
-              <span>  Protein: {{$meal->totalProtein()}}</span>
-              <span>  Fat:{{$meal->totalFat()}} </span>
+              <span class="label label-primary">  Calories: <span class="label label-default">{{$meal->totalCal()}} cal</span></span>
+              <span class="label label-primary">  Carbohydrates:  <span class="label label-default">{{$meal->totalCarbs()}} g</span></span>
+              <span class="label label-primary">  Protein:  <span class="label label-default">{{$meal->totalProtein()}} g</span></span>
+              <span class="label label-primary">  Fat:  <span class="label label-default">{{$meal->totalFat()}} g</span></span>
           </div>
       </div>
 
@@ -23,7 +23,7 @@
             @foreach ($meal->foods as $food)
               <li class="list-group-item">
                 <h3 class="left-aligned">{{$food->name}}</h3>
-                  <h5 class="right-aligned">Protein: {{$food->protein}}, Carbohydrates: {{$food->carbohydrates}}, Fat: {{$food->fat}}</h5>
+                  <h5 class="right-aligned">Protein: {{$food->protein}} g, Carbohydrates: {{$food->carbohydrates}} g, Fat: {{$food->fat}} g</h5>
               </li>
             @endforeach
           </ul>
