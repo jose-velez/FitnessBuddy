@@ -7,10 +7,10 @@
 
         <h3>{{$meal->name}}</h3>
           <div class="meal-info">
-              <span>  Calories: </span><br>
-              <span>  Carbohydrates: </span><br>
-              <span>  Protein: </span><br>
-              <span>  Fat: </span><br>
+              <span>  Calories: {{$meal->totalCal()}} </span>
+              <span>  Carbohydrates: {{$meal->totalCarbs()}}</span>
+              <span>  Protein: {{$meal->totalProtein()}}</span>
+              <span>  Fat:{{$meal->totalFat()}} </span>
           </div>
       </div>
 

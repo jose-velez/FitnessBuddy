@@ -51,7 +51,7 @@ class FoodsController extends Controller
 
 
       // send a Response
-      return redirect()->action("FoodController@show", $food->id);
+      return redirect()->action("MealController@show", $food->id);
     }
 
     /**
@@ -62,8 +62,7 @@ class FoodsController extends Controller
      */
     public function show($id)
     {
-      $food= Food::find($id);
-      return view('meals.show', compact('food'));
+      //
     }
 
     /**
